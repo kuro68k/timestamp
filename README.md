@@ -22,3 +22,7 @@ Example output:
 #define BUILD_TIME      521720818
 #define BUILD_NUMBER    1
 ```
+
+Sometimes it is handy to keep a copy of every build you do, so that they can be debugged later. For example, keeping .map files for old builds lets you peek/poke or examine memory dumps of old builds more easily.
+
+The `archive_build.cmd` script is an example of how to create archived versions of build output automatically. You can run it as a post-build action automatically in Visual Studio/Atmel Studio. It takes three parameters, `<source dir>`, `<destination dir>` and `<base file name>`.
