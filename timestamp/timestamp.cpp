@@ -36,11 +36,7 @@ int main(int argc, char* argv[])
 	if (build_num)
 	{
 		FILE *fp = fopen("buildnum.txt", "r");
-		if (fp == NULL)
-		{
-			printf("Could not open buildnum.txt for reading\n");
-		}
-		else
+		if (fp != NULL)
 		{
 			char line[256];
 			fgets(line, sizeof line, fp);
